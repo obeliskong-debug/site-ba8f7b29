@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avocat de Drept Penal cu peste 10 ani experiență. Popescu Marian oferă reprezentare juridică de încredere în toate aspectele dreptului penal.">
+    <meta name="theme-color" content="#f8f9fa">
+    <title>Popescu Marian - Avocat Drept Penal</title>
+    <style>
+        :root {
+            --color-white: #ffffff;
+            --color-light-gray: #f8f9fa;
+            --color-medium-gray: #e8e8e8;
+            --color-dark-gray: #4a4a4a;
+            --color-text: #2c2c2c;
+            --color-gold: #d4af37;
+            --color-blue: #4a90a4;
+            --color-accent: #d4af37;
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--color-text);
+            background-color: var(--color-white);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--color-gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--color-gold);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-gold);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-text);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%), 
+                        url('https://pub-534b25720b5e48129caa646bdc4731dc.r2.dev/sites/ba8f7b29-a573-42c5-8c85-14caafee3e9c/images/hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 249, 250, 0.92) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--color-dark-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: var(--color-gold);
+            color: var(--color-text);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            border: 2px solid var(--color-gold);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+            background-color: transparent;
+            color: var(--color-gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-text);
+            border: 2px solid var(--color-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-text);
+            color: var(--color-white);
+            border-color: var(--color-text);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            scroll-margin-top: 70px;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--color-dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--color-light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--color-text);
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: var(--color-dark-gray);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .about-highlights li {
+            font-size: 15px;
+            color: var(--color-text);
+            padding-left: 30px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .about-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-gold);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .about-image {
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--color-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--color-light-gray);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: var(--color-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--color-text);
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--color-dark-gray);
+            line-height: 1.8;
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--color-light-gray);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-gold);
+            margin-bottom: 15px;
+        }
+
+        .process-step h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--color-text);
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--color-dark-gray);
+            line-height: 1.8;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-gold) 0%, transparent 100%);
+            transform: translateY(-50%);
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%),
+                        url('https://pub-534b25720b5e48129caa646bdc4731dc.r2.dev/sites/ba8f7b29-a573-42c5-8c85-14caafee3e9c/images/cta-bg.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 249, 250, 0.92) 100%);
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+
+        .cta p {
+            font-size: 16px;
+            color: var(--color-dark-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .cta-note {
+            font-size: 13px;
+            color: var(--color-dark-gray);
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--color-white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .contact-info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-light-gray);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--color-gold);
+            flex-shrink: 0;
+        }
+
+        .contact-info-content h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--color-text);
+        }
+
+        .contact-info-content p {
+            font-size: 14px;
+            color: var(--color-dark-gray);
+        }
+
+        .contact-info-content a {
+            color: var(--color-gold);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-info-content a:hover {
+            color: var(--color-text);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: var(--color-light-gray);
+            padding: 40px;
+            border-radius: var(--border-radius);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 1px solid var(--color-medium-gray);
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--color-text);
+            background-color: var(--color-white);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            margin-top: 10px;
+        }
+
+        .contact-privacy {
+            font-size: 12px;
+            color: var(--color-dark-gray);
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 2px solid var(--color-gold);
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Utility Classes */
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: var(--transition);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--color-white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 40px 0;
+                gap: 20px;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .mobile-toggle.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-8px, 8px);
+            }
+
+            .mobile-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-toggle.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-7px, -7px);
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .process-step::after {
+                display: none;
+            }
+
+            .process-grid {
+                gap: 30px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 15px;
+            }
+
+            .hero {
+                margin-top: 70px;
+                height: auto;
+                min-height: 100vh;
+                padding: 40px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero-content {
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .section-container {
+                padding: 50px 15px;
+            }
+
+            .section-header h2 {
+                font-size: 26px;
+            }
+
+            .about-text h2 {
+                font-size: 26px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Popescu <span>Marian</span></a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Acasă</a></li>
+                <li><a href="#about" class="nav-link">Despre</a></li>
+                <li><a href="#services" class="nav-link">Servicii</a></li>
+                <li><a href="#process" class="nav-link">Proces</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Avocat de Drept Penal cu Peste 10 Ani Experiență</h1>
+                <p>Popescu Marian oferă reprezentare juridică de încredere și expertă în toate aspectele dreptului penal. Protejez-vă drepturile cu dedicare și profesionalism.</p>
+                <a href="#contact" class="btn">Programează o Consultație</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-container">
+                <div class="about-content">
+                    <div class="about-text scroll-hidden">
+                        <h2>Experiență și Dedicare în Dreptul Penal</h2>
+                        <p>Cu peste 10 ani de practică în dreptul penal, am reprezentat cu succes numeroși clienți în cazuri complexe. Specializarea mea acoperă toate aspectele dreptului penal, de la infracțiuni minore la cazuri grave care necesită o apărare strategică și expertă.</p>
+                        <ul class="about-highlights">
+                            <li>Peste 10 ani experiență în drept penal</li>
+                            <li>Reprezentare în toate instanțele</li>
+                            <li>Consultații personalizate pentru fiecare caz</li>
+                            <li>Abordare strategică și profesionistă</li>
+                        </ul>
+                    </div>
+                    <div class="about-image scroll-hidden">
+                        <img src="https://pub-534b25720b5e48129caa646bdc4731dc.r2.dev/sites/ba8f7b29-a573-42c5-8c85-14caafee3e9c/images/about-img.png" alt="Consultație juridică în birou modern" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="section-container">
+                <div class="section-header scroll-hidden">
+                    <h2>Servicii Juridice Specializate</h2>
+                    <p>Ofer o gamă completă de servicii în domeniul dreptului penal, adaptate nevoilor specifice ale fiecărui client.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card scroll-hidden">
+                        <h3>Apărare Penală</h3>
+                        <p>Reprezentare completă în procesele penale, de la cercetări preliminare până la soluționarea finală a cazului.</p>
+                    </div>
+                    <div class="service-card scroll-hidden">
+                        <h3>Consultații Juridice</h3>
+                        <p>Analize detaliate ale situațiilor juridice și sfaturi strategice pentru prevenirea problemelor legale.</p>
+                    </div>
+                    <div class="service-card scroll-hidden">
+                        <h3>Asistență în Anchete</h3>
+                        <p>Îndrumări și reprezentare în timpul anchetelor penale pentru protejarea drepturilor clientului.</p>
+                    </div>
+                    <div class="service-card scroll-hidden">
+                        <h3>Recursuri și Apeluri</h3>
+                        <p>Contestarea deciziilor judecătorești prin recursuri și apeluri fundamentate juridic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="process">
+            <div class="section-container">
+                <div class="section-header scroll-hidden">
+                    <h2>Cum Lucrez cu Clienții Mei</h2>
+                    <p>Procesul meu de lucru este structurat pentru a oferi cea mai bună reprezentare juridică posibilă.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step scroll-hidden">
+                        <div class="process-number">01</div>
+                        <h3>Consultația Inițială</h3>
+                        <p>Analizez detaliat cazul dumneavoastră și vă explic opțiunile juridice disponibile.</p>
+                    </div>
+                    <div class="process-step scroll-hidden">
+                        <div class="process-number">02</div>
+                        <h3>Strategia de Apărare</h3>
+                        <p>Dezvolt o strategie personalizată bazată pe specificul cazului și circumstanțele particulare.</p>
+                    </div>
+                    <div class="process-step scroll-hidden">
+                        <div class="process-number">03</div>
+                        <h3>Reprezentarea Juridică</h3>
+                        <p>Asigur reprezentarea completă în toate fazele procesului penal.</p>
+                    </div>
+                    <div class="process-step scroll-hidden">
+                        <div class="process-number">04</div>
+                        <h3>Monitorizarea Continuă</h3>
+                        <p>Vă țin informat în permanență despre evoluția cazului și următorii pași.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="cta">
+            <div class="section-container">
+                <div class="cta-content scroll-hidden">
+                    <h2>Aveți Nevoie de Asistență Juridică?</h2>
+                    <p>Nu lăsați problemele juridice să se agraveze. Contactați-mă astăzi pentru o consultație profesională și protejați-vă drepturile.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn">Contactează-mă Acum</a>
+                        <a href="#contact" class="btn btn-secondary">Solicită o Consultație</a>
+                    </div>
+                    <p class="cta-note">Consultația inițială este confidențială și personalizată</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <div class="section-header scroll-hidden">
+                    <h2>Contactați-mă</h2>
+                    <p>Sunt disponibil pentru consultații și vă răspund prompt la toate întrebările juridice.</p>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info-block scroll-hidden">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📧</div>
+                            <div class="contact-info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@popescumarian.ro">contact@popescumarian.ro</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📱</div>
+                            <div class="contact-info-content">
+                                <h3>Telefon</h3>
+                                <p><a href="tel:+40721000000">+40 721 000 000</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📍</div>
+                            <div class="contact-info-content">
+                                <h3>Adresă Birou</h3>
+                                <p>București, România<br>Disponibil pentru consultații în birou și online</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">⏰</div>
+                            <div class="contact-info-content">
+                                <h3>Program</h3>
+                                <p>Luni - Vineri: 09:00 - 18:00<br>Sâmbătă: Doar cu programare</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form scroll-hidden">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nume Complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adresa de Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Număr de Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subiectul Cazului *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Descrierea Cazului *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn form-submit">Trimite Mesajul</button>
+                            <p class="contact-privacy">Toate informațiile transmise sunt tratate confidențial conform eticii profesionale avocaturii.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Popescu Marian - Avocat de Drept Penal. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.scroll-hidden').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const phone = formData.get('phone');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+
+                // Create mailto link
+                const mailtoLink = `mailto:contact@popescumarian.ro?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nume: ${name}\nEmail: ${email}\nTelefon: ${phone}\n\nMesaj:\n${message}`)}`;
+                
+                // Show success message
+                alert('Mulțumesc pentru mesaj! Vă voi contacta în curând.');
+                
+                // Reset form
+                this.reset();
+            });
+        }
+
+        // Smooth scroll behavior for older browsers
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
